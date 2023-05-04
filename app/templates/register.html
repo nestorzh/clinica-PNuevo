@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/animate.css">
+<link rel="stylesheet" href="../static/css/theme.css">
+<form action="/register.html" method="post">
+<div class="modall">
+    <div class="modal-container">
+      <div class="modal-title">Registrate</div>
+      <div class="">
+        <div class="text">¿YA TIENES UNA CUENTA?</div>
+            <a class="nav-link" href="login.html">ㅤㅤㅤInicia Sesion</a>
+      </div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <p class="alert alert-primary">{{message}}</p> 
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <div class="row mt-5 ">
+      <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+        <label class="text-sm text-grey">Nombre</label>
+        <input type="text" name="nombre" class="form-control" placeholder="Escriba su nombre(s)">
+      </div>
+      <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+        <label class="text-sm text-grey">Apellidos</label>
+        <input type="text" name="apellidos" class="form-control" placeholder="Escriba sus Apellidos">
+      </div>
+      <div class="col-12 col-sm-6 py-2 wow fadeInLeft">
+        <label class="text-sm text-grey">Edad</label>
+        <input type="number" name="edad" class="form-control" placeholder="Digite su Edad">
+      </div>
+      <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
+        <label class="text-sm text-grey">Fecha de nacimiento</label>
+        <input type="date" name="nac" class="form-control">
+      </div>
+      <div class="col-12 py-2 wow fadeInUp">
+        <label class="text-sm text-grey">Correo Electronico:</label>
+        <input type="text" name="email" class="form-control" placeholder="Escriba su correo electronico">
+      </div>
+      <div class="col-12 py-2 wow fadeInRight">
+        <label class="text-sm text-grey">Contraseña:</label>
+        <input type="password" name="password" class="form-control" placeholder="Escriba una contraseña">
+      </div>
+    </div><hr>
+    <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+    <a href="index.html" class="btn btn-primary">Cancelar</a>
+    <button class="btn btn-primary" type="submit">Listo</button>
+  </div>
+    </div>
+  </div>
+</form>

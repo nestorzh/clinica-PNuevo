@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+<link rel="stylesheet" href="../static/css/animate.css">
+<link rel="stylesheet" href="../static/css/theme.css">
+<form action="/login.html" method="post">
+<div class="modall">
+    <div class="modal-container">
+      <div class="modal-title">Inicia Sesión</div>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <p class="alert alert-primary">{{message}}</p> 
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <div class="row mt-5 ">
+      <div class="col-12 py-2 wow fadeInUp">
+        <label class="text-sm text-grey">Correo Electronico:</label>
+        <input type="text" class="form-control" name="email" placeholder="Escriba su correo electronico">
+      </div>
+      <div class="col-12 py-2 wow fadeInRight">
+        <label class="text-sm text-grey">Contraseña:</label>
+        <input type="password" class="form-control" name="password" placeholder="Escriba una contraseña">
+      </div>
+      
+    </div>
+    <div class="col-12 col-sm-6 py-2 wow fadeInRight">
+    <button onclick="location.href='register.html'" class="btn btn-primary">Cancelar</button>
+    <button  class="btn btn-primary" type="submit">Iniciar</button>
+  </div>
+    </div>
+  </div>
+</form>
